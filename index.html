@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>おみくじ</title>
+<script>
+function getImage(){
+  //画像ファイル名を配列で保持
+  var arr = ['chuu.png', 'dai.png', 'kiti.png','kyou.png','shou.png'];
+ 
+  //ランダムで画像ファイルを取得して表示する
+  var obj = document.getElementById("im1");
+  var a = Math.floor(Math.random() * arr.length);
+  obj.src = arr[a];
+}
+</script>
+</head>
+<body>
+    おみくじです。ボタンを押すと１回引けます。
+  <input type="button" value="１回引く" onclick="getImage()">
+  <img id="im1" alt="あなたの今日の運勢は？">
+</body>
+</html>
